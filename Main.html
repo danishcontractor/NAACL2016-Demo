@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script  type="text/javascript" src="js/typeahead.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<head>
+<!--<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>-->
+<script type="text/javascript">
+
+$(document).ready(function(){
+    $('input.typeahead').typeahead({
+        name: 'countries',
+        prefetch: 'countries.json',
+        limit: 10
+    });
+});  
+
+$(document).ready(function(){
+    $('input.typeahead1').typeahead({
+        name: 'countries',
+        prefetch: 'countries.json',
+        limit: 10
+    });
+}); 
+</script>
+<style type="text/css">
+
+.new
+{
+  padding-top: 30px;
+  padding-left: 45px;
+  font-size: 15px;
+  color: black;
+  font-style: bold;
+  font-family: verdana;
+}
+.new1
+{
+  padding-top: 30px;
+  padding-left: 45px;
+  font-size: 15px;
+  color: black;
+  font-style: bold;
+  font-family: verdana;
+}
+.new2
+{
+  padding-left: 570px;
+  padding-bottom: 60px;
+  font-size: 45px;
+  color: black;
+  font-style: bold;
+  font-family: verdana;
+}
+
+
+.test1234{
+  background-color: #B0DBFF;
+    box-shadow: 10px 10px 5px #888888;
+    padding: 20px;
+
+}
+.test1
+{
+background-color: #EEE;
+    box-shadow: 10px 10px 5px #888888;
+}
+.bs-example{
+  font-family: sans-serif;
+  position: relative;
+  margin: 10px;
+}
+.typeahead, .tt-query, .tt-hint {
+  border: 2px solid #CCCCCC;
+  border-radius: 8px;
+  font-size: 24px;
+  height: 30px;
+  line-height: 30px;
+  outline: medium none;
+  padding: 8px 12px;
+  width: 200px;
+}
+.typeahead {
+  background-color: #FFFFFF;
+}
+.typeahead:focus {
+  border: 2px solid #0097CF;
+}
+.tt-query {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.tt-hint {
+  color: #999999;
+}
+.tt-dropdown-menu {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 12px;
+  padding: 8px 0;
+  width: 422px;
+}
+.tt-suggestion {
+  font-size: 24px;
+  line-height: 24px;
+  padding: 3px 20px;
+}
+.tt-suggestion.tt-is-under-cursor {
+  background-color: #0097CF;
+  color: #FFFFFF;
+}
+.tt-suggestion p {
+  margin: 0;
+}
+</style>
+
+
+</head>
+
+
+<body>
+ 
+
+  <div  align="center">
+    
+    <h1>Entity Balanced Gaussian pLSA for Automated Comparison</h1>  
+    <br>
+    <br> 
+</div>
+
+<div class="container">
+  <div class= "test1234">
+  <h4>Community created content (e.g., product descriptions,  reviews)  typically  discusses  one entity  at  a  time  and  it  can  be  hard  as  well
+as  time  consuming  for  a  user  to  compare two  or  more  entities.  In  response,  we  define a novel task of automatically generating
+entity  comparisons from  text.  Our  output  is a  table  that  semantically  clusters  descriptive phrases  about  entities.  Our  clustering  algorithm  is  a  Gaussian  extension  of  probabilistic latent semantic analysis (pLSA), in which each phrase is represented in word vector embedding space. In addition, our algorithm attempts to balance information about entities in each cluster to generate meaningful comparison tables, where possible.</h4>
+<br>
+<h4>  Read our paper at <a href="http://homes.cs.washington.edu/~mausam/papers/naacl16a.pdf">NAACL 2016</a></h4>
+<br>
+
+<h4><b>See our results for comparing cities for the purpose of tourism below. <b></h4> 
+
+
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+   <div class="bs-example container col-md-4" align="center">
+    <h4>Enter City 1</h4>
+        <input type="text" class="typeahead tt-query" id="state1" autocomplete="on" spellcheck="false">
+   </div> 
+   <div class="container col-xs-2">
+   </div>
+
+<div class="bs-example container col-md-4" align="center">
+    <h4>Enter City 2</h4>
+        <input type="text" class="typeahead1 tt-query" id="state2" autocomplete="on" spellcheck="false">
+    </div> 
+
+<div class="bs-example container col-md-12" style ="padding:50px; margin-left:420px;">
+    <button type="button" class="btn btn-primary" id="varun">Compare!</button>
+    <br>
+    <br>
+    <img src="./img/ajax-loader.gif" id="spinner"  style="display: none;" />
+  </div>
+
+    <div class= "container col-md-12 test1" id="contentpane"></div>
+
+
+
+</div>
+
+
+
+
+
+<div class="container col-sm-12" align="center">
+
+  
+<br>
+<h1 style="padding-top:40px;" > Contact</h1>
+
+  <div class=" new1 container col-sm-4">
+
+    
+                
+    <img src="img/Danish.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"> 
+  
+    <p class ="new1"><a href="https://sites.google.com/site/danishcontractor1/home">Danish Contractor </a><br>PhD Candidate IIT Delhi <br>and<br> Software Engineer<br>IBM Research, India </p>
+  
+  </div>
+
+  <div class=" new container container col-sm-4">
+               
+    <img src="img/mausam.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"> 
+    <p class ="new"><a href="http://homes.cs.washington.edu/~mausam/">Mausam</a><br> Associate Professor<br> Department of Computer Science and Engineering<br> IIT Delhi </p>
+  </div>
+
+  <div class=" new container col-sm-4">
+    
+               
+    <img src="img/parag.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"> 
+    <p class ="new"><a href="http://www.cse.iitd.ac.in/~parags/">Parag Singla</a><br> Assistant Professor<br>Department of Computer Science and Engineering<br> IIT Delhi  </p>
+  </div>
+</div>
+
+  
+
+
+
+
+
+
+
+</body>
+
+<script>
+$(document).ready(function(){
+  
+    $('#varun').click(function(){
+
+$('#spinner').show();
+
+      setTimeout(
+            function() {
+
+              var state1= $("#state1").val();
+      state1 = state1.replace(/\s/g,"%20"); 
+      var state2= $("#state2").val();
+      state2 = state2.replace(/\s/g,"%20"); 
+      var string= "./NAACL_DEMO/NAACL_DEMO/" + state1 + "_AND_" + state2 + ".TABLE_USED_CBC_GMM_KL_AUTO_CLUSTER.html";
+      console.log(string);
+
+
+
+
+
+
+
+      $.ajax({
+    url: string,
+    type:'HEAD',
+    error: function()
+    {
+        var string2= "./NAACL_DEMO/NAACL_DEMO/"+ state2 + "_AND_" + state1 + ".TABLE_USED_CBC_GMM_KL_AUTO_CLUSTER.html";
+
+        $.ajax({
+    url: string2,
+    type:'HEAD',
+    error: function()
+    {
+        alert("Sorry! This comparison has not been cached yet.")
+    },
+    success: function()
+    {
+        $('#spinner').hide();
+        $( "#contentpane" ).load(string2)
+    }
+});
+
+    },
+    success: function()
+    {
+        $('#spinner').hide();
+        $( "#contentpane" ).load(string)
+    }
+});
+                
+            },
+            400);
+      
+      
+    
+      
+
+     
+
+
+  
+     
+     });
+});
+</script>
+
+
+
+
+
+</html>
